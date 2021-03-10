@@ -1,0 +1,48 @@
+@import "../../Styles/variables";
+
+.custom-button{
+  width: fit-content;
+  background-color: $main-theme-color;
+  color: $white-color;
+  padding: 1em;
+  border-radius: $border-radius;
+  display: flex;
+  text-decoration: none;
+  transition: $default-transition-time;
+  cursor: pointer;
+  line-height: 1.2em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  &.disabled{
+    background-color: $grey-color1;
+    cursor: not-allowed;
+
+    &:hover{
+      @extend .custom-button.disabled;
+    }
+  }
+
+  &.active,
+  &:hover{
+    background-color: $dark-theme-color;
+  }
+
+  .icon{
+    font-size: 1em;
+  }
+
+  svg{
+    margin-left: .5em;
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+
+    &:visited{
+      color: inherit;
+    }
+  }
+}

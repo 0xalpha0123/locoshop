@@ -1,0 +1,11 @@
+
+@import "../../Styles/variables";
+.container_page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  .container_page_wrapper{
+    min-height: $min-page-height;
+  }
+}

@@ -1,0 +1,149 @@
+@import "../../Styles/variables";
+@import "../../Styles/placeholders";
+
+.store-search {
+  padding: 50px 0 25px 0;
+}
+
+.menu-autocomplete {
+  cursor: pointer;
+  padding: .5em;
+  border-bottom: 1px solid $white-color;
+  
+  .store-name{
+    font-weight: bolder;
+  }
+}
+
+#store-autocomplete {
+  @extend %reset-appearance;
+  width: 300px;
+  padding: 1em;
+  background: url("../../../public/img/search-icon.png") center right 1em no-repeat;
+  background-size: 16px auto;
+  background-color: $main-theme-color;
+  text-align: center;
+  border: none;
+  border-radius: $border-radius;
+  color: $white-color;
+  position:relative;
+  font-size: 1.2em;
+
+  &::placeholder{
+    color: $white-color;
+  }
+  &:focus {
+    outline: none;
+    background-color: $dark-theme-color;
+
+    &::placeholder{
+      color: transparent;
+    }
+  }
+}
+
+#store-autocomplete ~ div{
+  z-index: 1;
+  width: 80%;
+  left: 10% !important;
+}
+
+.store-message {
+  font-style: italic;
+  padding-bottom: 5px;
+}
+
+.store-search-examples{
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 $page-padding;
+  max-width: $max-width-section;
+  margin: auto;
+  margin-bottom: $page-padding;
+
+  .store-search-examples-title-wrapper{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+
+    @media screen and (max-width: 600px){
+      margin-bottom: 0em;
+    }
+    
+    .store-search-examples-title{
+      width: fit-content;
+      position: relative;
+
+      &::before,
+      &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $grey-color1;
+        top: 1em;
+      }
+      &::after{
+        left: -120%;
+      }
+      &::before{
+        right: -120%;
+      }
+      
+    }
+  }
+
+  .store-search-examples-item{
+    min-height: 100%;
+    padding: 1.5em 1em;
+    background-color: $grey-color1;
+    margin: .25em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1em;
+    border-radius: $border-radius;
+    transition: $default-transition-time;
+    max-width: 200px;
+
+    @media screen and (max-width: 600px){
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &:hover{
+      color: $white-color;
+      background-color: $main-theme-color;
+    }
+
+    .store-item-detail{
+      &.name,
+      &.address{
+        max-width: 100%;
+        line-height: 1em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      &.distance,
+      &.address{
+        font-size: .7em;
+        margin-top: .5em;
+      }
+      &.distance{
+        display: flex;
+        align-items: center;
+
+        svg{
+          margin-right: .25em;
+        }
+      }
+    }
+  }
+}

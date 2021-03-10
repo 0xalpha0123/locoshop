@@ -1,0 +1,48 @@
+{
+  "brand": "Apple",
+  "categories": ["Refurbished Phones", "Cell Phones"],
+  "dateAdded": "2020-05-23T06:03:44Z",
+  "dateUpdated": "2020-06-03T09:29:39Z",
+  "domains": ["www.walmart.com"],
+  "ean": ["0686294510878"],
+  "ean13": "0686294510878",
+  "gtins": ["686294510878", "0686294510878"],
+  "imageURLs": [
+    "https://i5.walmartimages.com/asr/c66f1482-e902-4dc9-b0ed-c8809a28e9e7_1.6cc668c7fc8ccb142d8d22d9720c5a85.jpeg",
+    "https://icdn2.digitaltrends.com/image/digitaltrends/iphone-11-pro-review-1.jpg",
+    "https://images.macrumors.com/article-new/2019/09/iphone11procameradesign-800x929.jpg",
+    "https://media.wired.com/photos/5d804ba7c891950008ce3449/master/w_1600%2Cc_limit/iphone-11_6312-Edit.jpg",
+    "https://www.bell.ca/Styles/wireless/all_languages/all_regions/catalog_images/large/iPhone_11_Pro_Midnight_Green_lrg2.png"
+  ],
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget dolor morbi non arcu risus. Quisque non tellus orci ac auctor. Eu sem integer vitae justo eget. Dictumst vestibulum rhoncus est pellentesque elit. Ultrices neque ornare aenean euismod elementum nisi quis eleifend.",
+  "keys": [
+    "686294510878",
+    "0686294510878",
+    "walmart.com-741784084",
+    "iphone11promax64gbmidnightgreenunlockedrefurbished/iph11pm64gbungnc01"
+  ],
+  "manufacturer": "Apple",
+  "name": "iPhone 11 Pro Max 64GB Midnight Green (Unlocked) Refurbished",
+  "prices": [
+    {
+      "amountMax": 1059,
+      "amountMin": 1059,
+      "availability": "true",
+      "currency": "USD",
+      "dateSeen": ["2020-06-03T09:30:00.000Z", "2020-06-03T03:03:00.000Z"],
+      "sourceURLs": ["https://www.walmart.com/ip/1C1NZT30E060"]
+    }
+  ],
+  "primaryCategories": ["Electronics", "test"],
+  "skus": [
+    {
+      "value": "IPH11PM-64GB-UN-GN-C01",
+      "sourceURLs": ["https://www.walmart.com/ip/1C1NZT30E060"]
+    }
+  ],
+  "sourceURLs": ["https://www.walmart.com/ip/1C1NZT30E060"],
+  "upc": ["686294510878"],
+  "upca": "686294510878",
+  "websiteIDs": ["walmart.com-741784084"],
+  "id": "cvshQHIBvxj1aRneT13l"
+}

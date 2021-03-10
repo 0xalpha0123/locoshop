@@ -1,0 +1,25 @@
+.App {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  // height: 100%;
+  min-height: 100vh;
+  // min-height: 100%;
+  font-family: "Cairo", Arial, Helvetica, sans-serif;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

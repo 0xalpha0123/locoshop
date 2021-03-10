@@ -1,0 +1,32 @@
+.my-account {
+  display: flex;
+  flex-direction: column;
+
+  .store-presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 80%;
+  }
+  
+  .go-to-button {
+    background-color: #28c2ce;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .store-address {
+    margin-bottom: 30px;
+  }
+
+  .store-name {
+    margin-top: 30px;
+  }
+
+}
+

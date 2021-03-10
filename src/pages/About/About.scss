@@ -1,0 +1,23 @@
+
+@import "../../Styles/placeholders";
+
+.about{
+    @extend %default-page;
+
+    .gallery-item{
+        
+            .sub-title{
+                padding-bottom: 1.8em;
+            }
+        
+            //because CSS dont have :first-of-class... yet.
+            > .paragraph{
+                font-weight: bolder;
+                font-size: 1.16em;
+            }
+            .paragraph ~ .paragraph{
+                font-weight: normal;
+                font-size: 1em;
+            }
+        }
+}

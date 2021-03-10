@@ -1,0 +1,88 @@
+@import "../../Styles/variables";
+
+.page-title {
+  height: auto;
+  padding: 2em 0 4em;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white-color;
+  background-color: $main-theme-color;
+  position: relative;
+
+  .page-title-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+
+    // @media screen and (max-width: $mobile-break-point){
+    //   padding-bottom: 1em;
+    // }
+    
+    .title {
+      font-size: 1.38em;
+      font-weight: bold;
+      line-height: 1em;
+    }
+
+    .content,
+    .subtitle {
+      font-size: 1.12em;
+      line-height: 1.3em;
+      max-width: 80%;
+
+      a{
+        color: inherit;
+        text-decoration: none;
+      }
+
+    }
+  }
+
+  .custom-button{
+    padding: 1em 1.5em;
+    margin-top: 1em;
+
+    &:hover{
+      background-color: $white-color;
+      color: $main-theme-color;
+    }
+  }
+}
+
+.page-title:before,
+.page-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  background-color: $white-color;
+  padding-bottom: 2.5em;
+}
+.page-title:before {
+  right: 50%;
+  transform-origin: 100% 100%;
+  transform: skewX(50deg);
+  // To fix a bug
+  margin-bottom: -1px;
+}
+.page-title:after {
+  left: 50%;
+  transform-origin: 0 100%;
+  transform: skewX(-50deg);
+  margin-bottom: -1px;
+}
+
+.page-title{
+  &.no-arrow{
+    &::before,
+    &::after{
+      display: none;
+    }
+  }
+}

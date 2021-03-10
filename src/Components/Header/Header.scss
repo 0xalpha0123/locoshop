@@ -1,0 +1,244 @@
+@import "../../Styles/variables";
+
+%button-wrap{
+  border: 2px solid $white-color;
+  border-radius: $border-radius;
+  display: flex;
+  padding: 0 .5em;
+  transition: all $default-transition-time;
+
+  @media screen and (min-width: $mobile-break-point){
+    &:hover{
+      background-color: $white-color;
+  
+      *{
+        color: $main-theme-color;
+      }
+    }
+  }
+}
+
+header {
+  z-index: 999;
+  background-color: $main-theme-color;
+  color: $white-color;
+  display: flex;
+  position: relative;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  .nav-left {
+    flex: 3;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    .title-header {
+      font-weight: normal;
+      display: inline;
+      font-size: 3vw;
+    }
+
+    .title-div {
+      padding-top: 0px;
+      display: inline-block;
+      transform: skew(-10deg);
+    }
+
+    .locoshop-logo {
+      display: flex;
+      align-items: center;
+      padding-left: 2vw;
+      white-space: nowrap;
+      > a {
+        color: $white-color;
+        text-decoration: none;
+        display: flex;
+      }
+      :hover > .logo-loco-shop {
+        animation: movelogo $default-transition-time;
+      }
+    }
+    
+    .logo-header {
+      width: 240px;
+      margin: 1.25em 0 1.25em 1.25em;
+
+      @media screen and (max-width: 1440px){
+        width: 215px;
+      }
+
+    }
+
+    .logo-loco-shop {
+      font-size: 3.2vw;
+    }
+
+    @keyframes movelogo {
+      90% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(5px);
+      }
+    }
+
+    .links {
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      margin-left: 40px;
+      z-index: 0;
+      padding-top: 25px;
+      &:focus {
+        background-color: pink;
+      }
+      > .link {
+        text-decoration: none !important;
+        color: white;
+        padding: 1vw;
+        white-space: nowrap;
+        z-index: 100;
+        &.login {
+          &.true {
+            display: none;
+          }
+        }
+        &.active {
+          font-weight: bolder;
+          font-size: large;
+        }
+      }
+      .link:hover {
+        transform: scale(1.07);
+      }
+    }
+  }
+
+  .nav-right {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 25px 2em 0 0;
+    font-size: 0.8em;
+    
+    .nav-right-buttons-wrap{
+      @extend %button-wrap;
+
+      .nav-right-button{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white-color;
+        white-space: nowrap;
+        height: 2em;
+        padding: .7em .9em;
+        line-height: 2em;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        transition: all $default-transition-time;
+        cursor: pointer;
+  
+        .nav-right-button-icon{
+          font-size: 1.3em;
+          margin-right: .5em;
+        }
+        
+        .nav-right-button-text{
+          position: relative;
+          &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background-color: $main-theme-color;
+            top: 1.6em;
+            transition: all $default-transition-time;
+          }
+        }
+
+        &:hover{
+          transform: scale(1.05);
+
+          .nav-right-button-text{
+            &::before{
+              width: 100%;
+            }
+          }
+
+        }
+
+      }
+      
+      .store-add-button {
+        &.connected-true {
+          display: none;
+        }
+      }
+  
+      .user-button,
+      .log-out {
+        &.connected-false {
+          display: none;
+        }
+      }
+    }
+
+    .lang-switch {
+      @extend %button-wrap;
+      margin-left: .5em;
+    }
+    .burger {
+      display: none;
+      grid-area: burger;
+      margin: 0 20px 0 0;
+      padding: 0;
+      justify-self: end;
+      font-size: 30px;
+      border: none;
+      background: none;
+      outline: none;
+      transition: 0.1s;
+      cursor: pointer;
+      color: $white-color;
+    }
+    .burger:active {
+      transform: scale(1.2);
+    }
+  }
+
+  // Mobile design
+  @media only screen and (max-width: 1024px) {
+
+    .nav-left {
+      .title-header,
+      .logo-loco-shop {
+        font-size: 40px;
+      }
+      .logo-header{
+        width: 200px;
+        margin: 0 $page-padding;
+      }
+    }
+    .nav-right {
+      justify-content: flex-end;
+      margin: 0;
+
+      .burger {
+        display: block;
+        padding-top: 5px;
+      }
+      .lang-switch {
+        border: none;
+        font-size: 20px !important;
+        padding: 15px;
+      }
+      .store-add-button {
+        display: none;
+      }
+    }
+  }
+}

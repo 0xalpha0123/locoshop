@@ -1,0 +1,54 @@
+@import "../../Styles/variables";
+
+.carousel {
+
+  &.hide{
+    display: none;
+  }
+
+  .slider-carousel {
+    background-color: $grey-color2;
+    padding: 1em 0;
+    text-align: center;
+    overflow: hidden;
+
+    .loader{
+      color: $white-color;
+    }
+
+  }
+
+  .slick-prev {
+    left: 2vw;
+    z-index: 50;
+  }
+  .slick-next {
+    right: 2vw;
+    z-index: 50;
+  }
+
+  .img-logo {
+    height: 7vw;
+    width: 7vw;
+    margin: 0 auto;
+
+    @media screen and (max-width: 980px){
+      height: 12vw;
+      width: 12vw;
+    }
+    
+  }
+
+  .slick-slide {
+    outline: none;
+  }
+
+  .carousel-control {
+    border: 0 !important;
+  }
+
+  .white-filter {
+    filter: invert(100%) sepia(98%) saturate(0%) hue-rotate(305deg)
+      brightness(101%) contrast(100%);
+  }
+}

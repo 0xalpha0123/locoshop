@@ -1,0 +1,18 @@
+.google-map {
+  height: 50vh;
+  width: 50vh;
+  filter: saturate(0);
+
+  .pointer {
+    display: flex;
+    white-space: nowrap;
+    font-size: 1.5em;
+    font-family: "Cairo-Bold";
+    text-transform: uppercase;
+    
+    svg {
+      color:red;
+      margin-right: .25em;
+    }
+  }
+}

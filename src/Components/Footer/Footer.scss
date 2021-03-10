@@ -1,0 +1,162 @@
+@import "../../Styles/variables";
+@import "../../Styles/placeholders";
+
+$custom-grey: lighten($grey-color1, 10%);
+
+footer {
+  padding: 20px;
+  background: $grey-color3;
+  color: $custom-grey;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+
+  .container {
+    align-items: flex-start;
+    justify-content: space-around;
+    display: flex;
+    border-bottom: solid 1px $grey-color2;
+    padding: 0 0 1.5em 0;
+
+    .link-footer {
+      color: $white-color;
+      text-decoration: none;
+      &:hover {
+        color: $main-theme-color;
+      }
+      &.active {
+        color: $white-color;
+        &:hover {
+          color: $main-theme-color;
+        }
+      }
+    }
+
+    p {
+      font-weight: bold;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0px;
+      > li {
+        font-size: 0.9em;
+      }
+    }
+
+    .logo-and-social {
+      text-align: center;
+      .locoshop-logo {
+        display: inline-block;
+        > .logo-loc-fa {
+          font-size: 5em;
+        }
+        > div {
+          padding: 5px;
+          font-weight: bold;
+          font-size: 1.4em;
+          transform: skew(-7deg);
+          background: linear-gradient(
+            to right,
+            #ff71ce 0%,
+            #01cdfe 25%,
+            #05ffa1 50%,
+            #b967ff 75%,
+            #fffb96 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .social-network-logo:hover {
+        &.instagram {
+          background: radial-gradient(
+            circle at 30% 107%,
+            #fdf497 0%,
+            #fdf497 5%,
+            #fd5949 45%,
+            #d6249f 60%,
+            #285aeb 90%
+          );
+        }
+        &.youtube {
+          background: #ff0000;
+        }
+        &.facebook {
+          background: #4267b2;
+        }
+        &.twitter {
+          background: #00aced;
+        }
+      }
+
+      // Logo animation
+      .logo-loc-fa:hover {
+        animation: movelogo 0.5s;
+      }
+
+      @keyframes movelogo {
+        90% {
+          transform: translateY(-5px);
+        }
+        100% {
+          transform: translateY(5px);
+        }
+      }
+    }
+
+    .col {
+      flex-grow: 1;
+    }
+
+    .sub-ul {
+      margin-left: 1em;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      font-size: small;
+    }
+
+    .logos {
+      padding-bottom: 5px;
+      > .item-logo {
+        padding-right: 3px;
+        > .social-network-logo {
+          width: 2em;
+          height: 2em;
+          padding: 0.3em;
+          @extend %main-color-filter;
+          transition: all $default-transition-time;
+          cursor: pointer;
+
+          &:hover{
+            transform: scale(1.2);
+          }
+
+        }
+      }
+    }
+
+    .logo-footer {
+      width: 208px;
+      margin-top: 10px;
+      @extend %main-color-filter;
+    }
+  }
+
+  .copyrights {
+    text-align: center;
+    font-size: small;
+    padding: 10px 0 0 0;
+  }
+
+  @media only screen and (max-width: 750px) {
+    .container {
+      flex-direction: column;
+      align-items: stretch;
+
+      .col {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import "../../Styles/variables";
+
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+
+  .error {
+    display: none;
+    &.wrong-password,
+    &.user-not-found,
+    &.too-many-requests {
+      display: block;
+      color: red;
+    }
+  }
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+
+    @media screen and (max-width: 600px){
+      width: 100%;
+    }
+
+    .input-wrapper{
+      width: 100%;
+      position: relative;
+
+      &.active{
+        .input-label{
+          opacity: 1;
+        }
+        .input-icon{
+          color: $main-theme-color;
+        }
+        input{
+          border: 1px solid $main-theme-color;
+        }
+      }
+
+      .input-icon{
+        position: absolute;
+        left: 1em;
+        top: calc(50% - 1em);
+        color: $grey-color1;
+        z-index: -1;
+      }
+
+      .input-label{
+        position: absolute;
+        left: .5em;
+        top: -.9em;
+        background-color: $main-theme-color;
+        color: $white-color;
+        border-radius: 5px;
+        padding: 0 .5em;
+        font-size: .7em;
+        opacity: 0;
+        transition: $default-transition-time;
+      }
+      
+      input {
+        width: 100%;
+        padding: 1.5em 1.5em 1.5em 3.5em;
+        margin: 0 0 1.25em 0;
+        display: inline-block;
+        border: 1px solid $grey-color1;
+        border-radius: $border-radius;
+        box-sizing: border-box;
+        background-color: transparent;
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover, 
+        &:-webkit-autofill:focus, 
+        &:-webkit-autofill:active  {
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+  
+        &:focus {
+          outline: none !important;
+          border: 2px solid $main-theme-color;
+        }
+      }
+    }
+
+
+    .custom-button{
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1em;
+    }
+  }
+}

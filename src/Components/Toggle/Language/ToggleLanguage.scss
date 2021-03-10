@@ -1,0 +1,46 @@
+@import "../../../Styles/variables";
+
+$margin: .25vw;
+
+.toggle-lang {
+  transition: all 0.2s ease;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+
+  .button {
+    width: 2em;
+    height: 3.4em;
+    text-transform: uppercase;
+    border-radius: $border-radius;
+    transition: all $default-transition-time;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    &:after{
+      position: absolute;
+      left: 15%;
+      bottom: .9em;
+      content: '';
+      width: 0%;
+      height: 1px;
+      background-color: $main-theme-color;
+      transition: $default-transition-time;
+    }
+
+    &.active,
+    &:hover{
+      color: $dark-theme-color !important;
+    }
+
+    &:hover{
+      &:after{
+        width: 70%;
+      }
+    }
+  }
+}

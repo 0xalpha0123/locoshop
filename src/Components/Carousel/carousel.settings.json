@@ -1,0 +1,24 @@
+{
+  "dots": false,
+  "infinite": true,
+  "autoplay": true,
+  "speed": 500,
+  "slidesToShow": 7,
+  "slidesToScroll": 1,
+  "centerPadding": "20px",
+  "centerMode": true,
+  "responsive": [
+    {
+      "breakpoint": 980,
+      "settings": {
+        "slidesToShow": 4
+      }
+    },
+    {
+      "breakpoint": 750,
+      "settings": {
+        "slidesToShow": 3
+      }
+    }
+  ]
+}

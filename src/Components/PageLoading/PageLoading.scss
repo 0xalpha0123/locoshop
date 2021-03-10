@@ -1,0 +1,14 @@
+@import "../../Styles/variables";
+
+.content-loading {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5em;
+  color: $dark-theme-color;
+
+  svg{
+    font-size: .5em;
+  }
+}

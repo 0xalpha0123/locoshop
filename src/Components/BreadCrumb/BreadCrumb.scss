@@ -1,0 +1,41 @@
+@import "../../Styles/variables";
+
+.breadcrumb{
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    max-width: $max-width-section;
+    display: flex;
+    padding: 1em 5%;
+    font-size: .9em;
+    
+    @media screen and (max-width: $mobile-break-point){
+        justify-content: center;
+    }
+
+    .breadcrumb-item{
+        background-color: $dark-theme-color;
+        padding: 0 .5em;
+        color: $white-color;
+        border-radius: $border-radius;
+        max-width: 150px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        
+        &.active{
+            background-color: $grey-color1;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    .breadcrumb-item-arrow{
+        color: $grey-color1;
+        margin: 0 .5em;
+    }
+
+}

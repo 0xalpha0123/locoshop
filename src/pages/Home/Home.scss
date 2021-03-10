@@ -1,0 +1,18 @@
+.home {
+  min-height: 100%;
+  main {
+    // display: flex;
+    // flex-direction: column;
+    // flex: 1;
+    article {
+      display: flex;
+      flex: 1;
+      section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+      }
+    }
+  }
+}

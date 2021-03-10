@@ -1,0 +1,37 @@
+@import "../../Styles/variables";
+
+.arrow-to-top{
+  border: 2px solid $main-theme-color;
+  color: $main-theme-color;
+  position: fixed;
+  bottom: -500px;
+  right: 2.5%;
+  z-index: 300;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: $default-transition-time;
+  background-color: $white-color;
+
+  &.show{
+    bottom: 1em;
+  }
+
+  &.is-over-footer{
+    background-color: $main-theme-color;
+    color: $white-color;
+  }
+
+  svg{
+    transform: translateY(-.05em);
+  }
+
+  &:hover{
+    transform: scale(1.1);
+  }
+}
